@@ -815,7 +815,6 @@
     }
 
     &__details{
-        position: relative;
         display: flex;
         align-items: center;
         gap: 22px;
@@ -823,6 +822,10 @@
         padding-bottom: 48px;
         font-weight: 400;
         font-size: 14px;
+    }
+
+    &__details details{
+        position: relative;
     }
 
     &__item{
