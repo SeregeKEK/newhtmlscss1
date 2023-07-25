@@ -90,6 +90,7 @@
   width: 232px;
   box-shadow: 6px 4px 35px 0 rgba(0, 0, 0, 0.21);
   visibility: hidden;
+  z-index: 2;
 }
 @media (max-width: 1599px) {
   .main-nav {
