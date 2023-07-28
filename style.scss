@@ -1070,3 +1070,225 @@
         }
     }
 }
+
+.cart{
+    padding-top: 96px;
+    padding-bottom: 128px;
+
+    &__content{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__content-left{
+        display: flex;
+        flex-direction: column;
+        gap: 72px;
+        max-width: 652px;
+    }
+
+    &__cards{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &__buttons{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__button{
+        width: 235px;
+        height: 50px;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 14px;
+        border: 1px solid #a4a4a4;
+        background-color: $white;
+        cursor: pointer;
+    }
+    
+    &__content-right{
+        display: flex;
+        flex-direction: column;
+        gap: 57px;
+    }
+
+}
+
+.cart-card{
+    position: relative;
+    display: flex;
+    max-height: 306px;
+    width: 100%;
+    background-color: $white;
+    box-shadow: 17px 19px 24px 0px rgba(0, 0, 0, 0.13);
+
+    &__img{
+        height: 100%;
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: 42px;
+        padding-top: 22px;
+        padding-left: 31px;
+    }
+
+    &__title{
+        max-width: 262px;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        color: #222;
+    }
+
+    &__details{
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    &__detail{
+        font-size: 22px;
+        color: #575757;
+    }
+
+    &__detail-price{
+        color: $mainColor;
+    }
+
+    &__color{
+        color: #6F6E6E;
+    }
+
+    &__detail-size{
+        color: #6F6E6E;
+    }
+
+    &__detail-input{
+        text-align: center;
+        margin-left: 24px;
+        width: 44px;
+        font-size: 18px;
+        line-height: 21px;
+        color: #656565;
+        border: 1px solid #EAEAEA;
+
+        &::-webkit-outer-spin-button, &::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+
+    &__close{
+        position: absolute;
+        top: 28px;
+        right: 22px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        &:hover svg path{
+            fill: $mainColor;
+        }
+    }
+}
+
+.cart-form{
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    padding-top: 21px;
+    gap: 20px;
+
+    &__title{
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 300;
+        color: #222;
+    }
+
+    &__input{
+        height: 45px;
+        padding: 0 17px;
+        font-size: 13px;
+        font-weight: 300;
+        color: #222;
+        background-color: $white;
+        border: 1px solid #a4a4a4;
+
+        &::placeholder{
+            color: #818181;
+        }
+
+        &:not(:first-of-type)::placeholder{
+            color: #222;
+        }
+    }
+
+    &__button{
+        width: 101px;
+        height: 35px;
+        font-weight: 300;
+        font-size: 11px;
+        color: #4a4a4a;
+        background-color: $white;
+        border: 1px solid #a4a4aa;
+        cursor: pointer;
+    }
+}
+
+.cart-checkout{
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    padding: 39px 44px 42px;
+    background-color: #f5f3f3;
+
+    &__text{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding-bottom: 21px;
+        border-bottom: 1px solid #e2e2e2;
+    }
+
+    &__sub{
+        text-align: right;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 13px;
+        color: #4a4a4a;
+
+        &--price{
+            margin-left: 25px;
+        }
+    }
+
+    &__grand{
+        text-align: right;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        color: #222;
+
+        &--price{
+            margin-left: 25px;
+            font-weight: 700;color: $mainColor;
+        }
+    }
+
+    &__button{
+        height: 50px;
+        color: $white;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        background-color: $mainColor;
+        border: none;
+        cursor: pointer;
+    }
+}
