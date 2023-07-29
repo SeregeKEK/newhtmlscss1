@@ -8,6 +8,14 @@
     text-decoration: none;
 }
 
+button{
+    transition: all .5s;
+
+    & svg path{
+        transition: all .5s;
+    }
+}
+
 .center-container{
     max-width: 1200px;
     margin: 0 auto;
@@ -353,7 +361,7 @@
     background-color: #F8F8F8;
 
     &:hover &__img::before{
-        visibility: visible;
+        opacity: 1;
     }
 
     &:hover &__btn{
@@ -365,7 +373,8 @@
         position: relative;
 
         &::before{
-            visibility: hidden;
+            transition: all .5s;
+            opacity: 0;
             content: "";
             position: absolute;
             width: 100%;
@@ -435,6 +444,12 @@
     border: 1px solid #FF6A6A;
     color: #F26376;
     background-color: $white;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $mainColor;
+        color: $white;
+    }    
 }
 
 .advantages{
@@ -586,9 +601,7 @@
     }
 
     &__act-form{
-        @media(max-width: 767px){
-            display: flex;
-        }
+        display: flex;
     }
     
     &__act-button{
@@ -598,6 +611,12 @@
         border: none;
         color: $white;
         border-radius:0 50px 50px 0;
+
+        &:hover{
+            background-color: $white;
+            color: $mainColor;
+            border: 1px solid $mainColor;
+        }
 
         @media(max-width: 767px){
             width: 95px;
@@ -641,11 +660,16 @@
         width: 32px;
         height: 32px;
         background-color: $white;
+        transition: all .5s;
 
         &:hover{
             background-color: $mainColor;
         }
         
+        & svg path{
+            transition: all .5s;
+        }
+
         &:hover svg path{
             fill: $white;
         }
@@ -700,6 +724,11 @@
         line-height: 17px;
         font-weight: 300;
         font-size: 14px;
+        transition: all .5s;
+
+        &:hover{
+            color: $mainColor;
+        }    
 
         &--active{
             color: $mainColor;
@@ -863,6 +892,15 @@
         border: 1px solid #FF6A6A;;
         background-color: transparent;
         cursor: pointer;
+
+        &:hover{
+            background-color: $mainColor;
+            color: $white;
+
+            & svg path{
+                fill: $white;
+            }
+        }
     }
 }
 
@@ -899,6 +937,7 @@
     position: relative;
     padding-bottom: 81px;
     width: 360px;
+    cursor: pointer;
 
     &__details{
         position: absolute;
@@ -961,6 +1000,7 @@
     &__link{
         color: #6F6E6E;
         font-size: 14px;
+        transition: all .5s;
 
         &:hover{
             color: $mainColor;
@@ -1292,3 +1332,122 @@
         cursor: pointer;
     }
 }
+
+.registration{
+    padding-top: 64px;
+    padding-bottom: 96px;
+
+    & .center-container{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.registration-form{
+
+    &__name{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title{
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 19px;
+        color: #222;
+        padding-bottom: 20px;
+    }
+
+    &__item{
+        padding: 0 17px;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 16px;
+        width: 360px;
+        height: 45px;
+        margin-bottom: 31px;
+        border: 1px solid rgba(164, 164, 164, 1);
+
+        &::placeholder{
+            color: #B1B1B1;
+        }
+    }
+
+    &__gender{
+        display: flex;
+        margin-bottom: 33px;
+        gap: 20px;
+        font-size: 11px;
+        font-weight: 300;
+        line-height: 13px;
+    }
+
+    &__gender-item label{
+        padding-left: 10px;
+    }
+
+    &__login{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__tip{
+        margin-top: -5px;
+        margin-bottom: 39px;
+        width: 360px;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 16px;
+        color: #B1B1B1;
+    }
+
+    &__button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        background-color: #F16D7F;
+        color: #fff;
+        border: none;
+        min-width: 167px;
+        min-height: 50px;
+
+        &:hover{
+            background-color: $white;
+            color: $mainColor;
+            border: 1px solid $mainColor;
+            
+            & svg path{
+                fill: $mainColor;
+            }
+        }
+    }
+}
+
+.registration-advantages{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    max-width: 652px;
+
+    &__title, &__text, &__item{
+        font-size: 24px;
+        font-weight: 300;
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        list-style-type: none;
+    }
+
+    &__item{
+
+        &::before{
+            content: url(img/galochka.svg);
+            padding-right: 22px;
+        }
+    }
+}
+

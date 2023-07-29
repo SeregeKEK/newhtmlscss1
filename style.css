@@ -6,6 +6,13 @@
   text-decoration: none;
 }
 
+button {
+  transition: all 0.5s;
+}
+button svg path {
+  transition: all 0.5s;
+}
+
 .center-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -346,7 +353,7 @@
   background-color: #F8F8F8;
 }
 .product-card:hover .product-card__img::before {
-  visibility: visible;
+  opacity: 1;
 }
 .product-card:hover .product-card__btn {
   visibility: visible;
@@ -356,7 +363,8 @@
   position: relative;
 }
 .product-card__img::before {
-  visibility: hidden;
+  transition: all 0.5s;
+  opacity: 0;
   content: "";
   position: absolute;
   width: 100%;
@@ -419,6 +427,11 @@
   border: 1px solid #FF6A6A;
   color: #F26376;
   background-color: #fff;
+  cursor: pointer;
+}
+.browse-button:hover {
+  background-color: #F16D7F;
+  color: #fff;
 }
 
 .advantages {
@@ -560,10 +573,8 @@
     width: 210px;
   }
 }
-@media (max-width: 767px) {
-  .subscribe__act-form {
-    display: flex;
-  }
+.subscribe__act-form {
+  display: flex;
 }
 .subscribe__act-button {
   width: 100px;
@@ -572,6 +583,11 @@
   border: none;
   color: #fff;
   border-radius: 0 50px 50px 0;
+}
+.subscribe__act-button:hover {
+  background-color: #fff;
+  color: #F16D7F;
+  border: 1px solid #F16D7F;
 }
 @media (max-width: 767px) {
   .subscribe__act-button {
@@ -616,9 +632,13 @@
   width: 32px;
   height: 32px;
   background-color: #fff;
+  transition: all 0.5s;
 }
 .social__link:hover {
   background-color: #F16D7F;
+}
+.social__link svg path {
+  transition: all 0.5s;
 }
 .social__link:hover svg path {
   fill: #fff;
@@ -663,6 +683,10 @@
   line-height: 17px;
   font-weight: 300;
   font-size: 14px;
+  transition: all 0.5s;
+}
+.breadcrumbs__link:hover {
+  color: #F16D7F;
 }
 .breadcrumbs__link--active {
   color: #F16D7F;
@@ -807,6 +831,13 @@
   background-color: transparent;
   cursor: pointer;
 }
+.description__button:hover {
+  background-color: #F16D7F;
+  color: #fff;
+}
+.description__button:hover svg path {
+  fill: #fff;
+}
 
 .product-catalog {
   padding-top: 664px;
@@ -837,6 +868,7 @@
   position: relative;
   padding-bottom: 81px;
   width: 360px;
+  cursor: pointer;
 }
 .filter__details {
   position: absolute;
@@ -887,6 +919,7 @@
 .filter__link {
   color: #6F6E6E;
   font-size: 14px;
+  transition: all 0.5s;
 }
 .filter__link:hover {
   color: #F16D7F;
@@ -1173,4 +1206,105 @@
   background-color: #F16D7F;
   border: none;
   cursor: pointer;
+}
+
+.registration {
+  padding-top: 64px;
+  padding-bottom: 96px;
+}
+.registration .center-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.registration-form__name {
+  display: flex;
+  flex-direction: column;
+}
+.registration-form__title {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  color: #222;
+  padding-bottom: 20px;
+}
+.registration-form__item {
+  padding: 0 17px;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 16px;
+  width: 360px;
+  height: 45px;
+  margin-bottom: 31px;
+  border: 1px solid rgb(164, 164, 164);
+}
+.registration-form__item::-moz-placeholder {
+  color: #B1B1B1;
+}
+.registration-form__item::placeholder {
+  color: #B1B1B1;
+}
+.registration-form__gender {
+  display: flex;
+  margin-bottom: 33px;
+  gap: 20px;
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 13px;
+}
+.registration-form__gender-item label {
+  padding-left: 10px;
+}
+.registration-form__login {
+  display: flex;
+  flex-direction: column;
+}
+.registration-form__tip {
+  margin-top: -5px;
+  margin-bottom: 39px;
+  width: 360px;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 16px;
+  color: #B1B1B1;
+}
+.registration-form__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: #F16D7F;
+  color: #fff;
+  border: none;
+  min-width: 167px;
+  min-height: 50px;
+}
+.registration-form__button:hover {
+  background-color: #fff;
+  color: #F16D7F;
+  border: 1px solid #F16D7F;
+}
+.registration-form__button:hover svg path {
+  fill: #F16D7F;
+}
+
+.registration-advantages {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  max-width: 652px;
+}
+.registration-advantages__title, .registration-advantages__text, .registration-advantages__item {
+  font-size: 24px;
+  font-weight: 300;
+}
+.registration-advantages__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style-type: none;
+}
+.registration-advantages__item::before {
+  content: url(img/galochka.svg);
+  padding-right: 22px;
 }/*# sourceMappingURL=style.css.map */
