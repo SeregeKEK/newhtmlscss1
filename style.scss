@@ -359,6 +359,7 @@ button{
 
 .product-card{
     background-color: #F8F8F8;
+    max-width: 360px;
 
     &:hover &__img::before{
         opacity: 1;
@@ -678,18 +679,33 @@ button{
 }
 
 .top-page{
+    padding-top: 60px;
+    padding-bottom: 60px;
     background-color: #F8F3F4;
+
+    @media(max-width: 555px){
+        padding-top: 24px;
+        padding-bottom: 46px;
+    }
 
     & .center-container{
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media(max-width: 555px){
+            flex-direction: column;
+            gap: 32px;
+        }
+    }
+
+    &__only-title{
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 
     &__title{
         color: $mainColor;
-        padding-top: 60px;
-        padding-bottom: 60px;
         font-weight: 400;
         font-size: 24px;
     }
@@ -742,11 +758,37 @@ button{
     padding-bottom: 42px;
     background-color: #F7F7F7;
 
+    @media(max-width: 1158px){
+        padding-bottom: 0;
+    }
+
     & .center-container{
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media(max-width: 1158px){
+            flex-direction: column;
+        }
+    }
+
+    &__slider{
+        @media(max-width: 1158px){
+            position: relative;
+            display: flex;
+            justify-content: center;
+            padding: 30px 0;
+            height: 624px;
+            width: 100%;    
+        }
+    }
+
+    &__img{
+
+        @media(max-width: 1158px){
+            max-width: 466px
+        }
     }
 
     &__button-left{
@@ -788,6 +830,10 @@ button{
     width: 1140px;
     top: 700px;
     border: 1px solid #EAEAEA;
+
+    @media(max-width: 1158px){
+        position: static;
+    }
 
     & .center-container{
         display: flex;
@@ -907,10 +953,21 @@ button{
 .product-catalog{
     padding-top: 664px;
     padding-bottom: 128px;
+
+    @media(max-width: 1158px){
+        padding-top: 128px;
+    }
     
     & .center-container{
         display: flex;
+        justify-content: center;
         gap: 30px;
+
+        & .product-card:last-child{
+            @media(max-width: 1158px){
+                display: none;
+            }
+        }
     }
 }
 
@@ -921,15 +978,24 @@ button{
     &__filter-sort{
         display: flex;
         gap: 30px;
+
+        @media(max-width: 1188px){
+            justify-content: center;
+        }
     }
 
     
     &__items{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(300px, 360px));
+        grid-template-rows: repeat(auto-fit, minmax(580px, 1fr));
+        justify-content: center;
         gap: 30px;
         padding-bottom: 48px;
+
+        @media(max-width: 1216px) {
+            gap: 16px;
+        }
     }
 }
 
@@ -1009,6 +1075,8 @@ button{
 }
 
 .sort{
+    min-width: 360px;
+    z-index: 3;
 
     &__details{
         display: flex;
@@ -1018,6 +1086,10 @@ button{
         padding-bottom: 48px;
         font-weight: 400;
         font-size: 14px;
+        
+        @media(max-width: 1188px){
+            justify-content: end;
+        }
     }
 
     &__details details{
@@ -1118,6 +1190,11 @@ button{
     &__content{
         display: flex;
         justify-content: space-between;
+        
+        @media(max-width: 1095px){
+            flex-direction: column;
+            gap: 65px;
+        }
     }
 
     &__content-left{
@@ -1125,6 +1202,11 @@ button{
         flex-direction: column;
         gap: 72px;
         max-width: 652px;
+        
+        @media(max-width: 1095px){
+            width: 100%;
+            margin: 0 auto;
+        }
     }
 
     &__cards{
@@ -1136,6 +1218,11 @@ button{
     &__buttons{
         display: flex;
         justify-content: space-between;
+
+        @media(max-width: 1095px){
+            justify-content: center;
+            gap: 48px;
+        }
     }
 
     &__button{
@@ -1153,6 +1240,12 @@ button{
         display: flex;
         flex-direction: column;
         gap: 57px;
+
+        @media(max-width: 1095px){
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 15px;
+        }
     }
 
 }
@@ -1161,12 +1254,12 @@ button{
     position: relative;
     display: flex;
     max-height: 306px;
-    width: 100%;
+    max-width: 100%;
     background-color: $white;
     box-shadow: 17px 19px 24px 0px rgba(0, 0, 0, 0.13);
 
     &__img{
-        height: 100%;
+        height: 306px;
     }
 
     &__content{
@@ -1235,6 +1328,10 @@ button{
             fill: $mainColor;
         }
     }
+
+    @media(max-width: 1095px){
+        width: 734px;
+    }
 }
 
 .cart-form{
@@ -1286,7 +1383,13 @@ button{
     flex-direction: column;
     gap: 17px;
     padding: 39px 44px 42px;
+    width: 360px;
+    height: 214px;
     background-color: #f5f3f3;
+
+    @media(max-width: 1095px){
+        margin-top: 59px;
+    }
 
     &__text{
         display: flex;
@@ -1330,6 +1433,11 @@ button{
         background-color: $mainColor;
         border: none;
         cursor: pointer;
+
+        @media(max-width: 1095px){
+            padding-left: 41px;
+            padding-right: 43px;
+        }
     }
 }
 
@@ -1340,10 +1448,15 @@ button{
     & .center-container{
         display: flex;
         justify-content: space-between;
+
+        @media(max-width: 1130px){
+            gap: 22px;
+        }
     }
 }
 
 .registration-form{
+    width: 360px;
 
     &__name{
         display: flex;
