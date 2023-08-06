@@ -882,6 +882,10 @@ button{
         text-align: center;
         width: 554px;   
         margin-bottom: 32px;
+        
+        @media(max-width: 600px){
+            width: 326px;
+        }
     }
 
     &__price{
@@ -898,6 +902,10 @@ button{
         padding-bottom: 48px;
         font-weight: 400;
         font-size: 14px;
+        
+        @media(max-width: 600px){
+            font-size: 12px;
+        }
     }
 
     &__details details{
@@ -963,6 +971,15 @@ button{
         justify-content: center;
         gap: 30px;
 
+        @media(max-width: 1158px){
+            gap: 16px;
+        }
+
+        @media(max-width: 600px){
+            flex-wrap: wrap;
+            gap: 16;
+        }    
+
         & .product-card:last-child{
             @media(max-width: 1158px){
                 display: none;
@@ -1012,7 +1029,12 @@ button{
         background-color: $white;
         z-index: 2;
 
+    @media(max-width: 555px){
+        width: 270px;
+    }
+
         &[open]{
+            z-index: 4;
             box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
         }
 
@@ -1032,6 +1054,17 @@ button{
         margin-bottom: 16px;
         font-weight: 600;
         font-size: 14px;
+
+        @media(max-width: 555px){
+            & span{
+                display: none;
+            }
+
+            & svg{
+                width: 37px;
+                height: 25px;
+            }
+        }
     }
 
     &__content{
@@ -1078,6 +1111,10 @@ button{
     min-width: 360px;
     z-index: 3;
 
+    @media(max-width: 555px){
+        min-width: 260px;
+    }
+
     &__details{
         display: flex;
         align-items: center;
@@ -1089,6 +1126,10 @@ button{
         
         @media(max-width: 1188px){
             justify-content: end;
+        }
+
+        @media(max-width: 555px){
+            font-size: 12px;
         }
     }
 
@@ -1223,6 +1264,10 @@ button{
             justify-content: center;
             gap: 48px;
         }
+
+        @media(max-width: 600px){
+            gap: 9px;
+        }
     }
 
     &__button{
@@ -1234,6 +1279,10 @@ button{
         border: 1px solid #a4a4a4;
         background-color: $white;
         cursor: pointer;
+
+        @media(max-width: 600px){
+            font-size: 12px;
+        }
     }
     
     &__content-right{
@@ -1246,8 +1295,12 @@ button{
             justify-content: space-between;
             gap: 15px;
         }
-    }
-
+        
+        @media(max-width: 600px){
+            display: flex;
+            flex-direction: column;
+        }
+    }    
 }
 
 .cart-card{
@@ -1260,6 +1313,10 @@ button{
 
     &__img{
         height: 306px;
+
+        @media( max-width: 600px){
+            height: 190px;
+        }
     }
 
     &__content{
@@ -1268,6 +1325,11 @@ button{
         gap: 42px;
         padding-top: 22px;
         padding-left: 31px;
+
+        @media( max-width: 600px){
+            gap: 26px;
+            padding-top: 13px;
+        }
     }
 
     &__title{
@@ -1276,6 +1338,12 @@ button{
         font-size: 24px;
         line-height: 28px;
         color: #222;
+
+        @media( max-width: 600px){
+            max-width: 144px;
+            font-weight: 400;
+            font-size: 16px;
+        }
     }
 
     &__details{
@@ -1287,6 +1355,12 @@ button{
     &__detail{
         font-size: 22px;
         color: #575757;
+
+        @media( max-width: 600px){
+            max-width: 110px;
+            font-weight: 400;
+            font-size: 14px;
+        }
     }
 
     &__detail-price{
@@ -1310,6 +1384,11 @@ button{
         color: #656565;
         border: 1px solid #EAEAEA;
 
+        @media( max-width: 600px){
+            width: 24px;
+            height: 15px;
+        }
+
         &::-webkit-outer-spin-button, &::-webkit-inner-spin-button{
             -webkit-appearance: none;
             margin: 0;
@@ -1327,10 +1406,23 @@ button{
         &:hover svg path{
             fill: $mainColor;
         }
+
+        @media(max-width: 600px){
+            & svg{
+                width: 10px;
+                height: 10px;
+            }
+            top: 0px;
+            right: 12px;
+        }
     }
 
     @media(max-width: 1095px){
-        width: 734px;
+        width: 100%;
+    }
+    
+    @media( max-width: 600px){
+        max-height: 190px;
     }
 }
 
@@ -1340,6 +1432,14 @@ button{
     width: 360px;
     padding-top: 21px;
     gap: 20px;
+
+    @media(max-width: 780px){
+        width: 250px;
+    }
+
+    @media(max-width:600px){
+        min-width: 100%;
+    }
 
     &__title{
         font-size: 16px;
@@ -1386,6 +1486,10 @@ button{
     width: 360px;
     height: 214px;
     background-color: #f5f3f3;
+
+    @media(max-width: 600px){
+        width: 100%;
+    }
 
     @media(max-width: 1095px){
         margin-top: 59px;
@@ -1448,15 +1552,25 @@ button{
     & .center-container{
         display: flex;
         justify-content: space-between;
+        gap: 22px;
 
-        @media(max-width: 1130px){
-            gap: 22px;
+        @media(max-width: 634px){
+            flex-direction: column;
+            gap: 40px;
         }
     }
 }
 
 .registration-form{
     width: 360px;
+
+    @media(max-width: 700px){
+        width: 300px;
+    }
+
+    @media(max-width: 634px){
+        width: 100%;
+    }
 
     &__name{
         display: flex;
@@ -1480,6 +1594,14 @@ button{
         height: 45px;
         margin-bottom: 31px;
         border: 1px solid rgba(164, 164, 164, 1);
+
+        @media(max-width: 700px){
+            width: 300px;
+        }
+    
+        @media(max-width: 634px){
+            width: 100%;
+        }
 
         &::placeholder{
             color: #B1B1B1;
