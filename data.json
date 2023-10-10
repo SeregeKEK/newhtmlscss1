@@ -1,0 +1,61 @@
+[
+    {
+        "imgUrl": "img/Rectangle15copy.png",
+        "cardTitle": "ELLERY X M'O CAPSULE",
+        "cardSubtitle": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+        "prise": "52.00",
+        "size": "M",
+        "color": "Green",
+        "id": "1"
+    },
+
+    {
+        "imgUrl": "img/product-image__img.png",
+        "cardTitle": "ELLERY X M'O CAPSULE",
+        "cardSubtitle": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+        "prise": "52.00",
+        "size": "XM",
+        "color": "Blue",
+        "id": "2"
+    },
+
+    {
+        "imgUrl": "img/Rectangle15copy1.png",
+        "cardTitle": "ELLERY X M'O CAPSULE",
+        "cardSubtitle": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+        "prise": "52.00",
+        "size": "S",
+        "color": "Red",
+        "id": "3"
+    },
+
+    {
+        "imgUrl": "img/Rectangle15copy2.png",
+        "cardTitle": "ELLERY X M'O CAPSULE",
+        "cardSubtitle": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+        "prise": "52.00",
+        "size": "XS",
+        "color": "Black",
+        "id": "4"
+    },
+
+    {
+        "imgUrl": "img/Rectangle15copy3.png",
+        "cardTitle": "ELLERY X M'O CAPSULE",
+        "cardSubtitle": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+        "prise": "52.00",
+        "size": "L",
+        "color": "Pink",
+        "id": "5"
+    },
+
+    {
+        "imgUrl": "img/Rectangle15copy4.png",
+        "cardTitle": "ELLERY X M'O CAPSULE",
+        "cardSubtitle": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+        "prise": "52.00",
+        "size": "XL",
+        "color": "Wite",
+        "id": "6"
+    }
+]

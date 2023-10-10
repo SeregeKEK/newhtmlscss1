@@ -1686,3 +1686,28 @@ button{
     }
 }
 
+.cart-items{
+    padding-left: 30px; 
+    padding-right: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    & .cart-card{
+    max-width: 652px;
+    margin-bottom: 40px;
+    }
+
+    & .cart-card:last-child {
+    margin-bottom: 96px;
+    }
+
+    &__title{
+        margin-top: 96px;
+        margin-bottom: 64px;
+        text-align: center;
+    }
+
+    @media(max-width: 1095px){
+        align-items: center;
+    }
+}

@@ -1581,4 +1581,28 @@ button svg path {
 .registration-advantages__item::before {
   content: url(img/galochka.svg);
   padding-right: 22px;
+}
+
+.cart-items {
+  padding-left: 30px;
+  padding-right: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.cart-items .cart-card {
+  max-width: 652px;
+  margin-bottom: 40px;
+}
+.cart-items .cart-card:last-child {
+  margin-bottom: 96px;
+}
+.cart-items__title {
+  margin-top: 96px;
+  margin-bottom: 64px;
+  text-align: center;
+}
+@media (max-width: 1095px) {
+  .cart-items {
+    align-items: center;
+  }
 }/*# sourceMappingURL=style.css.map */
